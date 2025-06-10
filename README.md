@@ -22,6 +22,6 @@ Sistema de login com painel para registro e controle de doações, utilizando No
 ## 🛠️ Instalação local
 
 ```bash
-git clone https://github.com/SEU_USUARIO/donatio.git
+git clone https://github.com//Emersonleco/Donatio
 cd donatio
 npm install
