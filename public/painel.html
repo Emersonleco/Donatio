@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Boxicons -->
+	<link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+	<link href='https://cdn.boxicons.com/fonts/transformations.min.css' rel='stylesheet'>
+
+	<!-- My CSS -->
+	<link rel="stylesheet" href="painel.css">
+	<title>Donatio</title>
+</head>
+<body>
+	<!-- SIDEBAR -->
+	<section id="sidebar" class="hide">
+		<a href="#" class="brand">
+			<i class='bx  bx-handshake bx-lg'></i>
+			<span class="text">Donatio</span>
+		</a>
+		<ul class="side-menu top">
+			<li class="active">
+				<a href="#">
+					<i class='bx bxs-dashboard bx-sm' ></i>
+					<span class="text">Registros</span>
+				</a>
+			</li>		
+		</ul>
+		<ul class="side-menu bottom">
+			<li>
+				<a href="#">
+					<i class='bx bxs-cog bx-sm bx-spin-hover' ></i>
+					<span class="text">Configurações</span>
+				</a>
+			</li>
+			<li>
+				<a href="/logout" class="logout">
+					<i class='bx bx-arrow-out-left-square-half bx-sm bx-burst-hover'></i>
+					<span class="text">Logout</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+	<!-- SIDEBAR -->
+
+	<!-- CONTENT -->
+	<section id="content">
+		<!-- NAVBAR -->
+<nav>
+    <i class='bx bx-menu bx-sm' ></i>
+    <form action="#">
+        <div class="form-input">
+            <input type="search" placeholder="Procurar...">
+            <button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
+        </div>
+    </form>
+    <input type="checkbox" class="checkbox" id="switch-mode" hidden />
+    <label class="swith-lm" for="switch-mode">
+        <i class="bx bxs-moon"></i>
+        <i class="bx bx-sun"></i>
+        <div class="ball"></div>
+    </label>
+
+    <!-- Notification Bell -->
+    <a href="#" class="notification" id="notificationIcon">
+        <i class='bx bxs-bell bx-tada-hover' ></i>
+        <span class="num">0</span>
+    </a>
+    <div class="notification-menu" id="notificationMenu">
+        <ul>
+            
+        </ul>
+    </div>
+
+    <!-- Profile Menu -->
+    <a href="#" class="profile" id="profileIcon">
+        <img src="https://placehold.co/600x400/png" alt="Profile">
+    </a>
+    <div class="profile-menu" id="profileMenu">
+        <ul>
+            <li><a href="#">My Profile</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Log Out</a></li>
+        </ul>
+    </div>
+</nav>
+<!-- NAVBAR -->
+
+<!-- MAIN -->
+		<main>
+			
+			<div class="table-data">
+				<div class="todo">
+					<div class="head">
+						<h3>Registrar doações</h3>
+						<i class='bx bx-plus icon'></i>
+						<!-- Modal de Cadastro -->
+							<div id="modalDoacao" class="modal hidden">
+								<div class="modal-content">
+									<span class="close-button" id="closeModal">&times;</span>
+									<h2>Nova Doação</h2>
+									<form id="formDoacao">
+										<label for="doador">Doador:</label>
+										<input type="text" id="doador" name="doador" required>
+										<label for="valor">Valor:</label>
+										<input type="number" id="valor" name="valor" required>
+										<label for="data">Data:</label>
+										<input type="date" id="data" name="data" required>
+										<button type="submit">Registrar</button>
+									</form>
+								</div>
+							</div>
+						<i class='bx bx-filter' ></i>
+						<!-- Modal de Filtro -->
+							<div id="modalFiltro" class="modal hidden">
+								<div class="modal-content">
+									<span class="close-button" id="closeFiltro">&times;</span>
+									<h2>Filtrar Doações</h2>
+									<form id="formFiltro">
+										<label for="filtroDoador">Doador:</label>
+										<input type="text" id="filtroDoador" name="filtroDoador">
+
+										<label for="filtroDataInicio">Data Inicial:</label>
+										<input type="date" id="filtroDataInicio" name="filtroDataInicio">
+
+										<label for="filtroDataFim">Data Final:</label>
+										<input type="date" id="filtroDataFim" name="filtroDataFim">
+
+										<label for="filtroValorMin">Valor Mínimo:</label>
+										<input type="number" id="filtroValorMin" name="filtroValorMin">
+
+										<label for="filtroValorMax">Valor Máximo:</label>
+										<input type="number" id="filtroValorMax" name="filtroValorMax">
+
+										<button type="submit">Aplicar Filtro</button>
+									</form>
+								</div>
+							</div>
+					</div>
+				<div class="app-container">
+					<div class="content">
+						<div class="section-header">
+							<h2>Lista de Doações</h2>
+						</div>
+						<table>
+							<thead>
+								<tr>
+									<th>Doador</th>
+									<th>Valor</th>
+									<th>Data</th>
+								</tr>
+							</thead>
+							<tbody>
+								
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>	
+		</main>
+		<!-- MAIN -->
+	</section>
+<!-- CONTENT -->
+	
+
+	<script src="painel.js"></script>
+</body>
+</html>
