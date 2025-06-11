@@ -60,7 +60,7 @@ searchButton.addEventListener('click', function (e) {
     }
 })
 
-// Dark Mode Switch
+// Dark Mode 
 const switchMode = document.getElementById('switch-mode');
 
 switchMode.addEventListener('change', function () {
@@ -72,19 +72,19 @@ switchMode.addEventListener('change', function () {
     }
 })
 
-// Notification Menu Toggle
+// Notificação
 document.querySelector('.notification').addEventListener('click', function () {
     document.querySelector('.notification-menu').classList.toggle('show');
     document.querySelector('.profile-menu').classList.remove('show'); // Close profile menu if open
 });
 
-// Profile Menu Toggle
+// Altera perfil
 document.querySelector('.profile').addEventListener('click', function () {
     document.querySelector('.profile-menu').classList.toggle('show');
     document.querySelector('.notification-menu').classList.remove('show'); // Close notification menu if open
 });
 
-// Close menus if clicked outside
+// Fechar menus se clicar fora
 window.addEventListener('click', function (e) {
     if (!e.target.closest('.notification') && !e.target.closest('.profile')) {
         document.querySelector('.notification-menu').classList.remove('show');
@@ -93,7 +93,7 @@ window.addEventListener('click', function (e) {
 });
 
 
-    // Başlangıçta tüm menüleri kapalı tut
+    // Manter todos os menus fechados na inicialização
 document.addEventListener("DOMContentLoaded", function() {
     var allMenus = document.querySelectorAll('.menu');
     allMenus.forEach(function(menu) {
@@ -144,7 +144,7 @@ const form = document.getElementById("formDoacao");
       // Atualiza tabela após salvar
       form.reset();
       modal.classList.add("hidden");
-      carregarDoacoes(); // recarrega a tabela
+      carregarDoacoes();
     } catch (err) {
       alert("Erro ao enviar doação.");
       console.error(err);
