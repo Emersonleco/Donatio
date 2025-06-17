@@ -1,3 +1,14 @@
+Desenvolvido na disciplina de Projeto Integrador: Desenvolvimento de Sistemas.
+UNISA - Universidade Santo Amaro
+
+INTEGRANTES:
+  Bruna Barbosa Maciel 
+  Daniel Lucas Almeida Gomes 
+  Douglas Tavares de Siqueira 
+  Emerson Barbosa Mota  
+  Enzo Santos Soares 
+
+
 # Donatio
 
 Sistema de login com painel para registro e controle de doações, utilizando Node.js, Express, MongoDB Atlas e interface moderna com HTML/CSS.
